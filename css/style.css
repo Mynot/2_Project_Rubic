@@ -1,0 +1,8 @@
+/*Mobile Resolution*/
+@import url("style-384.css") (max-width: 384px);
+
+/*Lower Resolution*/
+@import url("style-768.css") (min-width: 385px) and (max-width: 768px);
+
+/*Highest Resolution*/
+@import url("style-1200.css") (min-width: 769px);
