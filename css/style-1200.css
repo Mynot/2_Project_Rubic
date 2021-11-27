@@ -16,29 +16,85 @@ html{font-family:Arial, Helvetica, sans-serif}
 
 .head{
     grid-area: header;
-
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0%;
+    
+ 
+    background-color: aliceblue;
+    padding: 1% 2.5% 1%;
 }
 
 
 
 .navigation{
     grid-area: nav;
-    
+
     position: -webkit-sticky;
     position: sticky;
-    top: 0;
+    top: 12.5%;
  
     width: 100%;
-    height: 10%;
+    height: 20%;
     display: flex;
     flex-direction:column;
 
     align-items: baseline;
+    background-color: aliceblue;
 
 }
 
 .nav{
-    height: 100%;
+    width: 80%;
+    height: 10%;
+    padding: 1% 10% 1%;
+  
+
+}
+
+#Button_1{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 12.5%;
+
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: baseline;
+
+}
+
+#Button_2{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20%;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: baseline;
+
+}
+
+
+#Button_3{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 29%;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: baseline;
+
+}
+
+#Button_4{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 38%;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: baseline;
 
 }
 
@@ -50,6 +106,12 @@ html{font-family:Arial, Helvetica, sans-serif}
     flex-direction: column;
     justify-content:center;
     align-items:center;
+
+}
+
+.maincontent{
+    width: 80%;
+    padding: 1% 10% 1%;
 }
 
 .footer{
@@ -57,6 +119,5 @@ html{font-family:Arial, Helvetica, sans-serif}
     display: flex;
     flex-direction: row;
     justify-content:center;
-    align-items:center;
-    gap: 20px;
+
 }
