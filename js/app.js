@@ -1,16 +1,12 @@
 
-
-
 //Get Data
-
-
 sections = document.querySelectorAll('section');
 
 sectionwcontent = document.getElementsByClassName('content-container');
 
-
 const contentlength = document.getElementsByClassName('content-container').length;
 
+//Set Buttons and Main Content
 for (let i = 0; i < contentlength; i++) {
 
     sectionname = sectionwcontent[i].getAttribute('data-navi');
@@ -20,9 +16,7 @@ for (let i = 0; i < contentlength; i++) {
 
 };
 
-
-
-// Constants
+// Constants for Button and Mainsection
 const buttonsection1 = document.getElementById('Button_1');
 const buttonsection2 = document.getElementById('Button_2');
 const buttonsection3 = document.getElementById('Button_3');
@@ -34,8 +28,8 @@ const mainsection3 = document.getElementById('section_3');
 const mainsection4 = document.getElementById('section_4');
 
 // Height of Header and Navigation
-//const headheight = document.querySelector('header').height;
-//const navheight = document.querySelector('nav').height;
+const headheight = document.querySelector('header').offsetHeight;
+const navheight = document.querySelector('nav').offsetHeight;
 
 
 //Set Data
@@ -75,7 +69,6 @@ function createMainContentSection(elementno, secname) {
 }
 
 // Function set active state Main Area
-
 function setActiveState() {
     for (const section of sections) {
         const box = section.getBoundingClientRect();
@@ -93,7 +86,6 @@ function setActiveState() {
     }
 }
 
-
 //Change Appearence Functions for Events
 //Button Section 1
 function setButtonBackgroundS1() {
@@ -102,9 +94,8 @@ function setButtonBackgroundS1() {
 function setbackButtonBackgroundS1() {
     buttonsection1.setAttribute('class', 'buttonsection');
 }
+//Scroll to position
 function selectViewS1() {
-    const headheight = document.querySelector('header').offsetHeight;
-    const navheight = document.querySelector('nav').offsetHeight;
     const scrollposition = mainsection1.offsetTop;
     window.scrollTo({
         top: scrollposition - headheight - navheight,
@@ -118,9 +109,8 @@ function setButtonBackgroundS2() {
 function setbackButtonBackgroundS2() {
     buttonsection2.setAttribute('class', 'buttonsection');
 }
+//Scroll to position
 function selectViewS2() {
-    const headheight = document.querySelector('header').offsetHeight;
-    const navheight = document.querySelector('nav').offsetHeight;
     const scrollposition = mainsection2.offsetTop;
     window.scrollTo({
         top: scrollposition - headheight - navheight,
@@ -134,9 +124,8 @@ function setButtonBackgroundS3() {
 function setbackButtonBackgroundS3() {
     buttonsection3.setAttribute('class', 'buttonsection');
 }
+//Scroll to position
 function selectViewS3() {
-    const headheight = document.querySelector('header').offsetHeight;
-    const navheight = document.querySelector('nav').offsetHeight;
     const scrollposition = mainsection3.offsetTop;
     window.scrollTo({
         top: scrollposition - headheight - navheight,
@@ -150,9 +139,8 @@ function setButtonBackgroundS4() {
 function setbackButtonBackgroundS4() {
     buttonsection4.setAttribute('class', 'buttonsection');
 }
+//Scroll to position
 function selectViewS4() {
-    const headheight = document.querySelector('header').offsetHeight;
-    const navheight = document.querySelector('nav').offsetHeight;
     const scrollposition = mainsection4.offsetTop;
     window.scrollTo({
         top: scrollposition - headheight - navheight,
