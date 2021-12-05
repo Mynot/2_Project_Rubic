@@ -22,18 +22,20 @@ for (let i = 0; i < contentlength; i++) {
 
 
 
-
-const section1 = document.getElementById('Button_1');
-const section2 = document.getElementById('Button_2');
-const section3 = document.getElementById('Button_3');
-const section4 = document.getElementById('Button_4');
+// Constants
+const buttonsection1 = document.getElementById('Button_1');
+const buttonsection2 = document.getElementById('Button_2');
+const buttonsection3 = document.getElementById('Button_3');
+const buttonsection4 = document.getElementById('Button_4');
 
 const mainsection1 = document.getElementById('section_1');
 const mainsection2 = document.getElementById('section_2');
 const mainsection3 = document.getElementById('section_3');
 const mainsection4 = document.getElementById('section_4');
 
-
+// Height of Header and Navigation
+//const headheight = document.querySelector('header').height;
+//const navheight = document.querySelector('nav').height;
 
 
 //Set Data
@@ -43,7 +45,7 @@ function createNavigationButton(elementno, secname) {
     let newNav = document.createElement('div');
     let newContent = document.createTextNode(secname);
     //Set Attributes
-    newNav.setAttribute('class', 'section');
+    newNav.setAttribute('class', 'buttonsection');
     newNav.setAttribute('id', 'Button_' + elementno);
     newNav.appendChild(newContent);
     //Insert new element in Naviagation
@@ -72,18 +74,17 @@ function createMainContentSection(elementno, secname) {
 
 }
 
-// Function set active state
+// Function set active state Main Area
 
 function setActiveState() {
     for (const section of sections) {
         const box = section.getBoundingClientRect();
-        const sectionOffset = section.offsetTop;
         const sectionHight = screen.height;
         const boxtop = box.top;
         const boxbutton = box.bottom;
 
-        if (boxtop <= (sectionHight / 2)
-            && boxbutton >= (sectionHight / 2)
+        if (boxtop <= (sectionHight / 3)
+            && boxbutton >= (sectionHight / 3)
         ) {
             section.setAttribute('class', 'Active');
         } else {
@@ -93,76 +94,92 @@ function setActiveState() {
 }
 
 
-
 //Change Appearence Functions for Events
-//Section 1
+//Button Section 1
 function setButtonBackgroundS1() {
-    section1.style.backgroundImage = 'linear-gradient(to right, DodgerBlue, white)';
-    section1.style.boxShadow = '1px 1px 1px 1px #888888';
+    buttonsection1.setAttribute('class', 'Activebutton');
 }
 function setbackButtonBackgroundS1() {
-    section1.style.backgroundImage = '';
-    section1.style.boxShadow = '';
+    buttonsection1.setAttribute('class', 'buttonsection');
 }
 function selectViewS1() {
-    mainsection1.scrollIntoView(true);
+    const headheight = document.querySelector('header').offsetHeight;
+    const navheight = document.querySelector('nav').offsetHeight;
+    const scrollposition = mainsection1.offsetTop;
+    window.scrollTo({
+        top: scrollposition - headheight - navheight,
+        behavior: 'smooth'
+    });
 }
-function selectViewS2() {
-    mainsection2.scrollIntoView(true);
-}
-function selectViewS3() {
-    mainsection3.scrollIntoView(true);
-}
-function selectViewS4() {
-    mainsection4.scrollIntoView(true);
-}
-//Section 2
+//Button Section 2
 function setButtonBackgroundS2() {
-    section2.style.backgroundImage = 'linear-gradient(to right, DodgerBlue, white)';
-    section2.style.boxShadow = '1px 1px 1px 1px #888888';
+    buttonsection2.setAttribute('class', 'Activebutton');
 }
 function setbackButtonBackgroundS2() {
-    section2.style.backgroundImage = '';
-    section2.style.boxShadow = '';
+    buttonsection2.setAttribute('class', 'buttonsection');
 }
-//Section 3
+function selectViewS2() {
+    const headheight = document.querySelector('header').offsetHeight;
+    const navheight = document.querySelector('nav').offsetHeight;
+    const scrollposition = mainsection2.offsetTop;
+    window.scrollTo({
+        top: scrollposition - headheight - navheight,
+        behavior: 'smooth'
+    });
+}
+//Button Section 3
 function setButtonBackgroundS3() {
-    section3.style.backgroundImage = 'linear-gradient(to right, DodgerBlue, white)';
-    section3.style.boxShadow = '1px 1px 1px 1px #888888';
+    buttonsection3.setAttribute('class', 'Activebutton');
 }
 function setbackButtonBackgroundS3() {
-    section3.style.backgroundImage = '';
-    section3.style.boxShadow = '';
+    buttonsection3.setAttribute('class', 'buttonsection');
 }
-//Section 4
+function selectViewS3() {
+    const headheight = document.querySelector('header').offsetHeight;
+    const navheight = document.querySelector('nav').offsetHeight;
+    const scrollposition = mainsection3.offsetTop;
+    window.scrollTo({
+        top: scrollposition - headheight - navheight,
+        behavior: 'smooth'
+    });
+}
+//Button Section 4
 function setButtonBackgroundS4() {
-    section4.style.backgroundImage = 'linear-gradient(to right, DodgerBlue, white)';
-    section4.style.boxShadow = '1px 1px 1px 1px #888888';
+    buttonsection4.setAttribute('class', 'Activebutton');
 }
 function setbackButtonBackgroundS4() {
-    section4.style.backgroundImage = '';
-    section4.style.boxShadow = '';
+    buttonsection4.setAttribute('class', 'buttonsection');
+}
+function selectViewS4() {
+    const headheight = document.querySelector('header').offsetHeight;
+    const navheight = document.querySelector('nav').offsetHeight;
+    const scrollposition = mainsection4.offsetTop;
+    window.scrollTo({
+        top: scrollposition - headheight - navheight,
+        behavior: 'smooth'
+    });
 }
 
+//Main Area Active state
 document.addEventListener("scroll", setActiveState);
 
 //Button Events
 //Section 1
-section1.addEventListener('mouseover', setButtonBackgroundS1);
-section1.addEventListener('mouseout', setbackButtonBackgroundS1);
-section1.addEventListener('click', selectViewS1)
+buttonsection1.addEventListener('mouseover', setButtonBackgroundS1);
+buttonsection1.addEventListener('mouseout', setbackButtonBackgroundS1);
+buttonsection1.addEventListener('click', selectViewS1)
 //Section 2
-section2.addEventListener('mouseover', setButtonBackgroundS2);
-section2.addEventListener('mouseout', setbackButtonBackgroundS2);
-section2.addEventListener('click', selectViewS2)
+buttonsection2.addEventListener('mouseover', setButtonBackgroundS2);
+buttonsection2.addEventListener('mouseout', setbackButtonBackgroundS2);
+buttonsection2.addEventListener('click', selectViewS2)
 //Section 3
-section3.addEventListener('mouseover', setButtonBackgroundS3);
-section3.addEventListener('mouseout', setbackButtonBackgroundS3);
-section3.addEventListener('click', selectViewS3)
+buttonsection3.addEventListener('mouseover', setButtonBackgroundS3);
+buttonsection3.addEventListener('mouseout', setbackButtonBackgroundS3);
+buttonsection3.addEventListener('click', selectViewS3)
 //Section 4
-section4.addEventListener('mouseover', setButtonBackgroundS4);
-section4.addEventListener('mouseout', setbackButtonBackgroundS4);
-section4.addEventListener('click', selectViewS4)
+buttonsection4.addEventListener('mouseover', setButtonBackgroundS4);
+buttonsection4.addEventListener('mouseout', setbackButtonBackgroundS4);
+buttonsection4.addEventListener('click', selectViewS4)
 
 
 
