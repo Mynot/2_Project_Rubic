@@ -1,1 +1,113 @@
 html{font-family:Arial, Helvetica, sans-serif}
+
+.container{
+    font-size: 55%;
+    display: grid;
+    grid-template-columns: repeat(4, 25vw);
+    grid-template-rows: 10vh, 5vh;
+    grid-template-areas:
+    "header header header header"
+    "nav nav nav nav"
+    "main main main main"
+    "main main main main"
+    "main main main main"
+    "footer footer footer footer";
+}
+
+.head{
+    grid-area: header;
+    position: -webkit-sticky;
+    position: sticky;
+    color: lightslategray;
+    top: 0vh;
+    height: 10vh;
+    justify-content:center;
+    align-items: center;
+    background-color: rgb(26, 46, 63);
+    padding: 1% 10% 1%;
+}
+
+.Active{
+    background-color: rgb(98, 120, 139);
+}
+
+
+.navigation{
+    grid-area: nav;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10vh;
+    color: lightslategray;
+    height: 5vh;
+    display: flex;
+    flex-direction:row;    
+    justify-content:center;
+    align-items: center;
+    background-color: rgb(26, 46, 63);
+    padding: 0% 10% 0%;
+}
+
+.Activebutton{
+    box-shadow: 1px 1px 1px 1px #888888;
+    background-color: rgb(45, 70, 92);
+}
+
+#Button_1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items: center;
+}
+
+#Button_2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items: center;
+}
+
+
+#Button_3{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items: center;
+}
+
+#Button_4{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items: center;
+
+}
+
+.main{
+    grid-area: main;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}
+
+.content-container{
+    width: 80%;
+    padding: 1% 10% 1%;
+}
+
+.footer{
+    height: 10vh;
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+}
