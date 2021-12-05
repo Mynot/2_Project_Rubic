@@ -45,9 +45,7 @@ function createNavigationButton(elementno, secname) {
     //Insert new element in Naviagation
 
     const navigation = document.querySelector('nav');
-
     navigation.appendChild(newNav);
-
 }
 
 //Create Main Content Sections
