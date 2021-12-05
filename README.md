@@ -34,7 +34,8 @@ Landing Page wir dynamic content
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-
+Github Pages
+https://mynot.github.io/2_Project_Rubic/
 
 ### Prerequisites
 
@@ -42,26 +43,26 @@ Java Script must be allowed on browser.
 
 ### Installing
 
-
+Not necessarry
 
 ## 🔧 Running the tests <a name = "tests"></a>
 
-Explain how to run the automated tests for this system.
+-
 
 ### Break down into end to end tests
 
-Explain what these tests test and why
+-
 
 ```
-Give an example
+-
 ```
 
 ### And coding style tests
 
-Explain what these tests test and why
+-
 
 ```
-Give an example
+-
 ```
 
 ## Usage <a name="usage"></a>
