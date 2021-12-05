@@ -16,7 +16,7 @@
     The navigation Bar-Buttons and avtive Area are changed dynamically.
 </p>
 
-## 📝 Table of Contents
+## Table of Contents
 
 - [About](#about)
 - [Getting Started](#getting_started)
@@ -28,7 +28,7 @@
 - [Authors](#authors)
 - [Acknowledgments](#acknowledgement)
 
-## 🧐 About <a name = "Stefan Schweifer"></a>
+##  About <a name = "Stefan Schweifer"></a>
 
 Landing Page wir dynamic content
 
@@ -64,21 +64,21 @@ Explain what these tests test and why
 Give an example
 ```
 
-## 🎈 Usage <a name="usage"></a>
+## Usage <a name="usage"></a>
 
 
 
-## 🚀 Deployment <a name = "deployment"></a>
+## Deployment <a name = "deployment"></a>
 
 
-## ⛏️ Built Using <a name = "built_using"></a>
+## Built Using <a name = "built_using"></a>
 
 
-## ✍️ Authors <a name = "authors"></a>
+## Authors <a name = "authors"></a>
 
 - [@Mynot](https://github.com/Mynot) 
 
 
-## 🎉 Acknowledgements <a name = "acknowledgement"></a>
+## Acknowledgements <a name = "acknowledgement"></a>
 
 
